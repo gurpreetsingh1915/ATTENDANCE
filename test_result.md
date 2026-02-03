@@ -101,3 +101,178 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Test the Student Management System (EduTrack) at https://student-tracker-347.preview.emergentagent.com - This is a student attendance and fee tracking system built with React. Test key features: Dashboard Page, Students Page, Attendance Page, Payments Page, Courses Page, and General UI functionality."
+
+frontend:
+  - task: "Dashboard Page - Stats Cards Display"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Dashboard.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - verify stats cards show correct data (Total Students, Total Revenue, Pending Payments, Courses)"
+
+  - task: "Dashboard Page - Today's Attendance Summary"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Dashboard.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - verify Today's Attendance summary displays properly with Present, Absent, Late, Excused counts"
+
+  - task: "Dashboard Page - Recent Students and Upcoming Payments"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Dashboard.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - verify Recent Students and Upcoming Payments sections display correctly"
+
+  - task: "Students Page - Add Student Dialog"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Students.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - test Add Student button opens dialog and form submission works"
+
+  - task: "Students Page - Search and Filter Functionality"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Students.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - test search by name/email/phone and filter by course/status"
+
+  - task: "Students Page - Table Display and Actions"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Students.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - verify student table displays correctly and edit/view actions work from dropdown menu"
+
+  - task: "Attendance Page - Date Selector and Marking"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Attendance.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - test date selector and marking attendance (Present, Absent, Late, Excused buttons)"
+
+  - task: "Attendance Page - View Modes"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Attendance.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - test switching between Daily View and Monthly View, verify attendance stats update"
+
+  - task: "Payments Page - Payment Stats and Actions"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Payments.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - verify payment stats (Total Collected, Pending Amount, Overdue Amount), test Add Installment and Record Payment functionality"
+
+  - task: "Payments Page - Filter Functionality"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Payments.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - test filter by status (Paid, Pending, Partial, Overdue)"
+
+  - task: "Courses Page - Course Management"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Courses.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - verify course cards display with duration, enrolled count, and fees. Test Add Course, edit and delete functionality"
+
+  - task: "General UI - Navigation and Theme"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/layout"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Initial testing required - test sidebar navigation works, dark/light theme toggle, verify mobile responsiveness"
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+
+test_plan:
+  current_focus:
+    - "Dashboard Page - Stats Cards Display"
+    - "Dashboard Page - Today's Attendance Summary"
+    - "Dashboard Page - Recent Students and Upcoming Payments"
+    - "Students Page - Add Student Dialog"
+    - "Students Page - Search and Filter Functionality"
+    - "Students Page - Table Display and Actions"
+    - "Attendance Page - Date Selector and Marking"
+    - "Attendance Page - View Modes"
+    - "Payments Page - Payment Stats and Actions"
+    - "Payments Page - Filter Functionality"
+    - "Courses Page - Course Management"
+    - "General UI - Navigation and Theme"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "sequential"
+
+agent_communication:
+  - agent: "testing"
+    message: "Starting comprehensive testing of Student Management System (EduTrack). Will test all major features including Dashboard, Students, Attendance, Payments, Courses pages and general UI functionality. Testing will be done sequentially to ensure thorough coverage."
