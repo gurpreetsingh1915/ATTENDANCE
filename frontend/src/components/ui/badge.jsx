@@ -15,6 +15,29 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
         outline: "text-foreground",
+        // Attendance status variants
+        present:
+          "border-success/20 bg-success/10 text-success",
+        absent:
+          "border-destructive/20 bg-destructive/10 text-destructive",
+        late:
+          "border-warning/20 bg-warning/10 text-warning",
+        excused:
+          "border-info/20 bg-info/10 text-info",
+        // Payment status variants
+        paid:
+          "border-success/20 bg-success/10 text-success",
+        pending:
+          "border-warning/20 bg-warning/10 text-warning",
+        overdue:
+          "border-destructive/20 bg-destructive/10 text-destructive",
+        partial:
+          "border-info/20 bg-info/10 text-info",
+        // Status variants
+        active:
+          "border-success/20 bg-success/10 text-success",
+        inactive:
+          "border-muted-foreground/20 bg-muted text-muted-foreground",
       },
     },
     defaultVariants: {
