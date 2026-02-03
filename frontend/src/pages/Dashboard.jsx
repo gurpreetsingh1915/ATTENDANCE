@@ -22,10 +22,9 @@ import {
   getStudents, 
   getPayments, 
   getCourses,
-  getAttendance,
-  initializeSampleData 
+  getAttendance
 } from '@/lib/storage';
-import { format, isToday, parseISO, isAfter, isBefore } from 'date-fns';
+import { format, parseISO, isBefore } from 'date-fns';
 
 export const Dashboard = () => {
   const [stats, setStats] = useState(null);
