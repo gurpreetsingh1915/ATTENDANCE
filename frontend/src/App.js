@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
@@ -7,8 +8,14 @@ import Students from "@/pages/Students";
 import Attendance from "@/pages/Attendance";
 import Payments from "@/pages/Payments";
 import Courses from "@/pages/Courses";
+import { initializeSampleData } from "@/lib/storage";
 
 function App() {
+  useEffect(() => {
+    // Initialize sample data if empty on app load
+    initializeSampleData();
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
