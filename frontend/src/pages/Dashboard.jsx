@@ -35,9 +35,6 @@ export const Dashboard = () => {
   const [todayAttendance, setTodayAttendance] = useState({ present: 0, absent: 0, late: 0, total: 0 });
 
   useEffect(() => {
-    // Initialize sample data if empty
-    initializeSampleData();
-    
     // Load data
     const statistics = getStatistics();
     setStats(statistics);
