@@ -78,20 +78,12 @@ export const Attendance = () => {
   const [noteText, setNoteText] = useState('');
   const [calendarOpen, setCalendarOpen] = useState(false);
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  useEffect(() => {
-    loadAttendanceForDate(selectedDate);
-  }, [selectedDate]);
-
-  const loadData = () => {
+  const loadData = React.useCallback(() => {
     setStudents(getStudents().filter(s => s.status === 'active'));
     setCourses(getCourses());
-  };
+  }, []);
 
-  const loadAttendanceForDate = (date) => {
+  const loadAttendanceForDate = React.useCallback((date) => {
     const dateStr = format(date, 'yyyy-MM-dd');
     const records = getAttendanceByDate(dateStr);
     const dataMap = {};
@@ -99,7 +91,15 @@ export const Attendance = () => {
       dataMap[record.studentId] = record;
     });
     setAttendanceData(dataMap);
-  };
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
+
+  useEffect(() => {
+    loadAttendanceForDate(selectedDate);
+  }, [selectedDate, loadAttendanceForDate]);
 
   const getCourseName = (courseId) => {
     const course = courses.find(c => c.id === courseId);
